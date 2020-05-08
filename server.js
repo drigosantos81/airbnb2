@@ -24,6 +24,6 @@ server.get("/locais", function(req, res) {
     return res.render("locais");
 })
 
-server.listen(5003, function() {
+server.listen(process.env.PORT || 5003, function() {
     console.log('Servidor rodando');
 });
