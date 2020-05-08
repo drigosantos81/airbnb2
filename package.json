@@ -5,6 +5,7 @@
   "main": "server.js",
   "dependencies": {
     "express": "^4.17.1",
+    "netlify-cli": "^2.50.0",
     "nunjucks": "^3.2.1"
   },
   "devDependencies": {},

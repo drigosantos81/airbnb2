@@ -18,8 +18,12 @@ nunjucks.configure("views", {
 
 server.get("/", function(req, res) {
     return res.render("index", { items: dados });
+});
+
+server.get("/locais", function(req, res) {
+    return res.render("locais");
 })
 
 server.listen(5003, function() {
     console.log('Servidor rodando');
-})
+});

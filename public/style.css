@@ -139,7 +139,7 @@ body {
 }
 
 .infos p:nth-child(2) {
-    font-size: 16px;
+    font-size: 12px;
     margin-top: 5px;
     color: #111111;
 }
@@ -149,6 +149,35 @@ body {
     font-size: 18px;
     margin-top: 5px;
     color: #111111;
+}
+
+.all {
+    position: absolute;
+    left: 90%;
+}
+
+.all p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.news {
+    display: flex;
+    justify-content: left;
+margin: 50px 0px 0px 0px;
+}
+
+.news img {
+    width: 4%;
+    margin-right: 10px;
+}
+
+.news h2 {
+    margin: 5px 0px 0px 0px;
+    padding: 5px 5px 0px 5px;
+    color: #111111;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 #produtos {
@@ -176,6 +205,8 @@ body {
     text-align: center;
     font-size: 25px;
     padding: 8px 0px;
+    font-weight: 400;
+    color: #111111;
 }
 
 .produtoDestaque p {
