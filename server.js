@@ -21,7 +21,7 @@ server.get("/", function(req, res) {
 });
 
 server.get("/locais", function(req, res) {
-    return res.render("locais");
+    return res.render("locais", {items: dados });
 })
 
 server.listen(process.env.PORT || 5003, function() {
