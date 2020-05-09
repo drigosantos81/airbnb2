@@ -1,118 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AirBnb 2.0</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-    <div class="container">
-        
-        <div class="header">
-            <div>
-                <a href="/"><img src="/logoairbnb.png" alt="Logo foodFy"></a>
-            </div>                
-            <div class="links">
-                <a href="/ajuda">Ajuda</a>
-                <a href="/entrar">Entrar</a>
-                <button>Cadastrar-se</button>
-            </div>
-        </div>
+{% extends 'layout.html' %}
 
-        <div class="menu">
-            <div>
-                <a href="">Lugares para ficar</a>
-            </div>
-            <div>
-                <a href="">Estadias longas</a>
-            </div>
-            <div>
-                <a href="">Experiências</a>
-            </div>
-            
-        </div>
+{% block content %}
+    <div class="hosts">
 
-        <div class="pesquisa">
-
-            <div class="pesquisa-sombra">
-                <p>Localização</p>
-                <input type="text" placeholder="Para onde vai?">
-            </div>
-
-            <div>
-                <p>Check-In/Check-Out</p>
-                <input type="date" placeholder="Insira as datas">
-            </div>
-
-            <div>
-                <p>Hóspedes</p>
-                <input type="number" placeholder="Insira o número de hóspedes">
-            </div>
-
-            <button>Buscar</button>
-        </div>
-
-        <div class="hosts">
-
-            {% for item in items.slice(0, 3) %}
-                    <div class="card">
-                        <div class="img">
-                            <img src="{{item.photo}}" alt="">
-                        </div>
-                        <div class="infos">
-                            <p>{{item.property_type}}</p>
-                            <p>{{item.name}}</p>
-                            <p>{{item.price}}</p>
-                        </div>
+        {% for item in items.slice(0, 3) %}
+                <div class="card">
+                    <div class="img">
+                        <img src="{{item.photo}}" alt="">
                     </div>
-            {% endfor %}
-
-        </div>
-
-        <div id="all" class="all">
-            <p><a href="/locais">+ exibir tudo</a></p>
-        </div>
-
-        <div class="news">
-            <img src="https://image.flaticon.com/icons/svg/776/776531.svg" alt="">
-            <h2>Sugestões de pacotes de viagens</h2>
-        </div>
-
-        <div id="produtos">
-            <div class="produtoDestaque">
-                <iframe 
-                    class="avatar" 
-                    style="background: url(https://source.unsplash.com/collection/3504465/500x500) no-repeat center center / cover">
-                </iframe>
-                <h3>Praias</h3>
-            </div>
-            <div class="produtoDestaque">
-                <iframe 
-                    class="avatar" 
-                    style="background: url(https://source.unsplash.com/collection/273266/500x500) no-repeat center center / cover">
-                </iframe>
-                <h3>Inverno</h3>
-            </div>
-            <div class="produtoDestaque">
-                <iframe 
-                    class="avatar" 
-                    style="background: url(https://source.unsplash.com/collection/1129/500x500) no-repeat center center / cover">
-                </iframe>
-                <h3>Roteiros</h3>
-            </div>
-        </div>
+                    <div class="infos">
+                        <p>{{item.property_type}}</p>
+                        <p>{{item.name}}</p>
+                        <p>{{item.price}}</p>
+                    </div>
+                </div>
+        {% endfor %}
 
     </div>
 
-    <div class="col-lg-10">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.9082242042571!2d-38.47154517084004!3d-12.995315892670282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b443c7686af%3A0xde908f7e8494392d!2sRua%20Rubens%20Guelli%20-%20Pituba%2C%20Salvador%20-%20BA%2C%2040301-155!5e0!3m2!1spt-BR!2sbr!4v1579906319452!5m2!1spt-BR!2sbr" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-      </div>
-
-    <div class="footer">
-        <p>Todos direitos reservados, airbnb</p>
+    <div id="all" class="all">
+        <p><a href="/locais">+ exibir tudo</a></p>
     </div>
-    
-    <script src="/script.js"></script>
-</body>
-</html>
+
+    <div class="news">
+        <img src="https://image.flaticon.com/icons/svg/776/776531.svg" alt="">
+        <h2>Sugestões de pacotes de viagens</h2>
+    </div>
+
+    <div id="produtos">
+        <div class="produtoDestaque">
+            <iframe 
+                class="avatar" 
+                style="background: url(https://source.unsplash.com/collection/3504465/500x500) no-repeat center center / cover">
+            </iframe>
+            <h3>Praias</h3>
+        </div>
+        <div class="produtoDestaque">
+            <iframe 
+                class="avatar" 
+                style="background: url(https://source.unsplash.com/collection/273266/500x500) no-repeat center center / cover">
+            </iframe>
+            <h3>Inverno</h3>
+        </div>
+        <div class="produtoDestaque">
+            <iframe 
+                class="avatar" 
+                style="background: url(https://source.unsplash.com/collection/1129/500x500) no-repeat center center / cover">
+            </iframe>
+            <h3>Roteiros</h3>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locais | AirBnb 2.0</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="header">
+            <div>
+                <a href="/"><img src="/logoairbnb.png" alt="Logo foodFy"></a>
+            </div>                
+            <div class="links">
+                <a href="/ajuda">Ajuda</a>
+                <a href="/entrar">Entrar</a>
+                <button>Cadastrar-se</button>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div>
+                <a href="">Lugares para ficar</a>
+            </div>
+            <div>
+                <a href="">Estadias longas</a>
+            </div>
+            <div>
+                <a href="">Experiências</a>
+            </div>
+            
+        </div>
+
+        <div class="pesquisa">
+
+            <div class="pesquisa-sombra">
+                <p>Localização</p>
+                <input type="text" placeholder="Para onde vai?">
+            </div>
+
+            <div>
+                <p>Check-In/Check-Out</p>
+                <input type="date" placeholder="Insira as datas">
+            </div>
+
+            <div>
+                <p>Hóspedes</p>
+                <input type="number" placeholder="Insira o número de hóspedes">
+            </div>
+
+            <button>Buscar</button>
+        </div>
+
+        {% block content %}{% endblock %}
+
+    </div>
+
+    <div class="col-lg-10">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.9082242042571!2d-38.47154517084004!3d-12.995315892670282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b443c7686af%3A0xde908f7e8494392d!2sRua%20Rubens%20Guelli%20-%20Pituba%2C%20Salvador%20-%20BA%2C%2040301-155!5e0!3m2!1spt-BR!2sbr!4v1579906319452!5m2!1spt-BR!2sbr" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
+
+    <div class="footer">
+        <p>Todos direitos reservados, airbnb</p>
+    </div>
+    
+    <script src="/script.js"></script>
+</body>
+</html>
