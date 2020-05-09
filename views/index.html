@@ -9,9 +9,9 @@
                         <img class="image" src="{{item.photo}}" alt="Imagem do espaço" onclick="modal()">
                     </div>
                     <div class="infos">
-                        <p id="propriedade">{{item.property_type}}</p>
-                        <p id="nome">{{item.name}}</p>
-                        <p id="preco">{{item.price}}</p>
+                        <p class="prop-image">{{item.property_type}}</p>
+                        <p class="prop-name">{{item.name}}</p>
+                        <p class="prop-preco">R$ {{item.price}},00</p>
                     </div>
                 </div>
         {% endfor %}

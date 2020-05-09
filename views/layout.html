@@ -35,22 +35,25 @@
 
         <div class="pesquisa">
 
-            <div class="pesquisa-sombra">
+            <div>
                 <p>Localização</p>
                 <input type="text" placeholder="Para onde vai?">
             </div>
 
             <div>
                 <p>Check-In/Check-Out</p>
-                <input type="date" placeholder="Insira as datas">
+                <input id="data" type="date" placeholder="Insira as datas">
             </div>
 
             <div>
                 <p>Hóspedes</p>
-                <input type="number" placeholder="Insira o número de hóspedes">
+                <input type="number" placeholder="Número de hóspedes">
             </div>
-
-            <button>Buscar</button>
+            
+            <div class="busca">
+                <button>Buscar</button>
+            </div>
+            
         </div>
 
         {% block content %}{% endblock %}
