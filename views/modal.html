@@ -3,40 +3,45 @@
 <div class="modal">
 
     <div class="modal-on">
+        <div class="size">
 
-        <div class="pesquisa">
+            <form action="" method="post">
 
-            <div>
-                <p>Check-In</p>
-                <input id="data" type="date" placeholder="Insira as datas">
-            </div>
-
-            <div>
-                <p>Check-Out</p>
-                <input id="data" type="date" placeholder="Insira as datas">
-            </div>
+                <div class="pesquisa">
     
-            <div>
-                <p>Hóspedes</p>
-                <input type="number" placeholder="Número de hóspedes">
+                        <div>
+                            <p>Check-In</p>
+                            <input name="dt1" id="data-in" type="date" placeholder="Insira as datas">
+                        </div>
+                        <div>
+                            <p>Check-Out</p>
+                            <input name="dt2" id="data-out" type="date" placeholder="Insira as datas">
+                        </div>
+                        <div>
+                            <p>Hóspedes</p>
+                            <input name="qtd" id="qtdH" type="number" placeholder="Número de hóspedes">
+                        </div>
+                        
+                        <div class="busca">
+                            <!-- <input style="display: none;" name="soma" readonly> -->
+                            <button type="button" onclick="calcula()">Calcular</button>
+                        </div>
+                </div>
+    
+            </form>
+    
+            <div class="image-modal">
+                <img src="" frameborder="0" alt="">
+                <div class="modal-info">
+                    <h3></h3>
+                    <p class="modal-name"></p>
+                    <p class="modal-preco"></p>
+                    <button class="close">Fechar</button>
+                </div>
             </div>
-            
-            <div class="busca">
-                <button>Calcular</button>
-            </div>
-            
-        </div>
-
-        <div class="image-modal">
-            <img src="" frameborder="0" alt="">
-        </div>
-        <div class="modal-info">
-            <h3></h3>
-            <p class="modal-name"></p>
-            <p class="modal-preco"></p>
-            <button class="close">Fechar</button>    
-        </div>
         
+        </div>
     </div>
-    
 </div>
+
+<script src="/script.js"></script>

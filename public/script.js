@@ -22,3 +22,20 @@ function modal() {
         modal.classList.remove("active");
     });
 }
+
+// function calcula() {
+//     const ckIn = document.getElementById("data-in").innerHTML;
+//     const ckOut = document.getElementById("data-out").innerHTML;
+//     const qtd1 = document.getElementById("qtdH").innerHTML;
+
+//     const resultado = (ckOut - ckIn) * qtd1;
+
+//     form.soma.value = ((form.dt1.value) + (form.dt2.value)) * (form.qtd.value);
+    
+//     console.log(ckIn);
+//     console.log(ckOut);
+//     console.log(qtd1);
+//     console.log(resultado);
+    
+//     document.querySelector(".modal-preco").innerHTML = resultado;
+// }
