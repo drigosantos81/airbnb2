@@ -4,14 +4,14 @@
     <div class="hosts">
 
         {% for item in items.slice(0, 3) %}
-                <div class="card">
+                <div class="card" id={{item.photo}}>
                     <div class="img">
-                        <img src="{{item.photo}}" alt="">
+                        <img class="image" src="{{item.photo}}" alt="Imagem do espaço" onclick="modal()">
                     </div>
                     <div class="infos">
-                        <p>{{item.property_type}}</p>
-                        <p>{{item.name}}</p>
-                        <p>{{item.price}}</p>
+                        <p id="propriedade">{{item.property_type}}</p>
+                        <p id="nome">{{item.name}}</p>
+                        <p id="preco">{{item.price}}</p>
                     </div>
                 </div>
         {% endfor %}
@@ -19,7 +19,7 @@
     </div>
 
     <div id="all" class="all">
-        <p><a href="/locais">+ exibir tudo</a></p>
+        <p><a href="/locais">+ exibir mais opções</a></p>
     </div>
 
     <div class="news">
@@ -50,5 +50,10 @@
             <h3>Roteiros</h3>
         </div>
     </div>
+{% endblock %}
+
+{% block modal %}
+
+    {% include 'modal.html' %}
 
 {% endblock %}
